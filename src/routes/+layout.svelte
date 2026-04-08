@@ -4,8 +4,10 @@
   import DetailPanel from '$lib/components/DetailPanel.svelte';
 </script>
 
-<div class="flex flex-col h-screen overflow-hidden">
+<div class="shell flex flex-col h-screen overflow-hidden">
   <Header />
-  <slot />
+  <div class="app-content flex-1 min-h-0">
+    <slot />
+  </div>
   <DetailPanel />
 </div>
